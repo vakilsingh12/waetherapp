@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Piazzolla:ital,wght@0,300;0,400;0,900;1,200&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Piazzolla', serif;
+}
+:root{
+  --main-bg:#1e272e;
+  --main-color:#0097e6;
+}
+html{
+  font-size: 62.5%;
+}
+.row{
+  margin: 0;
+}
+.main_menu{
+  background-color: var(--main-bg);
+}
+.navbar{
+  background-color: var(--main-bg);
+  padding: 2rem 0;
+}
+.navbar li{
+  margin-left: 3rem;
+}
+.navbar a{
+  font-size: 1.8rem;
+}
+.navbar a:hover{
+  color: #0097e6 !important;
+}
+.fa-snowflake{
+  transition: all linear;
+  animation: rot 1s linear infinite;
+  color: var(--main-color);
+}
+@keyframes rot{
+  0%{
+    transform:rotate(0deg);
+  }
+  100%{
+    transform:rotate(360deg);
+  }
+}
+
+.main_header_left{
+  height: 50rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.main_header_left p{
+  font-size: 2rem;
+}
+.main_header_left h1{
+  font-size: 3rem;
+  margin: 1rem 0 4rem 0;
+  text-transform: capitalize;
+}
+.main_header_left h1 span{
+ color:var(--main-color);
+}
+.main_header_left button{
+  font-size: 2rem;
+  border: none;
+  padding: 0.7rem 1.6rem;
+  border-radius: 3rem;
+  outline: none;
+  text-transform: uppercase;
+  box-shadow: 1px 1px 2px 1px black;
+  background-color: #fff;
+}
+.main_header_left button:hover{
+  box-shadow: 1px 1px 2px 1px var(--main-color);
+}
+.main_header_right{
+  height: 50rem;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.main_header_right img{
+  border-radius: 10px;
+  box-shadow: 1px 1px 2px 3px var(--main-color);
+}
+body{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+footer{
+  width: 100%;
+  background-color: var(--main-bg);
+  margin-top: auto;
+}
+footer p{
+  text-align: center;
+  color: #fff;
+  margin: 0;
+  font-size: 2rem;
+  line-height: 5rem;
+}
+footer p span{
+  color: red;
+}
+
+.main_header_right .error{
+  box-shadow: 1px 1px 2px 3px var(--main-color);
+  position: relative;
+  left: 40%;
+  
+}
+
+/* weather */
+
+.temp_info{
+  width: 40rem;
+  margin:auto;
+  /* padding: 1rem; */
+  min-height: 20rem !important;
+  background-color: #323544;
+  border-radius: 1rem;
+}
+.top_layer{
+  width: 100%;
+  height: 20%;
+  background-color: #2d303d;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 1rem;
+}
+.top_layer p{
+  color: #fff;
+  font-weight: 400;
+  padding: 2rem;
+  font-size: 2rem;
+}
+.main_layer{
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+.main_layer #city_name{
+  color: #bfc1c8;
+  font-weight: 400;
+  padding: 1rem 0 3rem 0;
+  font-size: 2rem;
+}
+.midle_layer{
+  display: flex;
+  justify-content: space-around;
+}
+/* .data_hide{
+  visibility: hidden;
+} */
+.midle_layer p{
+  color: #fff;
+  font-size: 5rem;
+}
+.fa{
+  color: #009ad8;
+}
+sup{
+  font-size: 4rem;
+}
+.data_hide{
+  visibility: hidden;
+  transition: all 0.3s linear;
+}
+.temp_form{
+  width: 60%;
+  margin: 8rem auto 4rem;
+  position: relative;
+}
+.temp_form input[type="text"]{
+  width: 100%;
+  padding: 2rem 5rem 2rem 2rem;
+  background: #2d303d;
+  color: white;
+  border-radius: 3.4rem;
+  outline: none;
+  border: none;
+  font-size: 1.6rem;
+
+}
+::placeholder{
+  color: #bfc1c8;
+}
+.temp_form input[type="submit"]{
+   position: absolute;
+   top: 5px;
+   bottom: 5px;
+   right: 5px;
+   padding: 0 4rem;
+   border-radius: 4rem;
+   outline: none;
+   color: #fff;
+   background: #009ad8;
+   font-size: 1.6rem;
+   border: none;
+   /* transition: color 0.3s; */
+   font-weight: 600;
+   text-transform:uppercase;
+}
+.temp_form input[type="submit"]:hover{
+  color: #009ad8;
+  background-color: #fff;
+  text-transform:uppercase;
+}
+
+@media(max-width:768px){
+  .main_header_left{
+    height: auto;
+    margin: 5rem 0;
+    /* background-color: red; */
+  }
+  .main_header_right{
+    height: auto;
+    margin: 3rem 0;
+  }
+  .temp_form{
+    width:auto;
+    margin-bottom: 1rem;
+  }
+  .temp_info{
+    width: auto;
+  }
+  .temp_form input[type="submit"]{
+    padding: 0 2rem;
+  }
+}

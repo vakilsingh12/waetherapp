@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Quicksand', sans-serif;
+}
+body{
+  background: #f3f2ef;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+html,body{
+  font-size: 62.5%;
+  height: 100%;
+}
+.box{
+  width: 25vw;
+  height: 40vh;
+  border: 1px solid crimson;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 1px 1px 5px crimson;
+  border-radius:1rem;
+  min-width: 20rem;
+  min-height: 35rem;
+  padding: 250px 0px;
+  background: #a5bbdd;
+  transform: translate3d(0,0,0);
+}
+.wave{
+   opacity: 0.3;
+   position:absolute;
+   top: 120%;
+   left: 50%;
+   background: #fff;
+   width: 50rem;
+   height: 50rem;
+   margin-left: -25rem;
+   margin-top: -33rem;
+   transform-origin: 50% 48%;
+   border-radius: 43%;
+   animation: drift 3000s infinite linear;
+   z-index:1;
+}
+.three{
+  animation: drift 5000ms infinite linear !important;
+  z-index: 2 !important;
+  opacity: 0.2;
+}
+.two{
+  animation: drift 7000ms infinite linear !important;
+  z-index: 3 !important;
+  opacity: 0.1;
+}
+.box:after{
+  content: "";
+  display: block;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 11;
+  transform: translate3d(0,0,0);
+}
+@keyframes drift{
+  from{
+    transform: rotate(0deg);
+  }
+  from{
+    transform: translate(360deg);
+  }
+}
+.info{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 45%;
+  z-index: 4;
+}
+.location{
+  margin-top: 1.5rem;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+
+}
+.fa-street-view{
+  animation: rotates 3s linear infinite alternate;
+}
+@keyframes rotates{
+  from{
+    transform: translateX(-0.5rem);
+  }
+  to{
+    transform: translateX(0.5rem);
+  }
+}
+#date{
+  text-align: center;
+  margin: 0.5rem;
+  color: #576066;
+  font-size: 1.2rem;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.temp{
+  margin-top: 2.5rem;
+  text-align: center;
+  font-size: 4rem;
+}
+.tempmin_max{
+  text-align: center;
+  margin-top: 0.3rem;
+  font-weight: 300;
+  font-size:1.2rem;
+  color: #57606f;
+}
+#weathercon{
+ margin-top: -140px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ font-size: 8em;
+}
+#weathercon .fas{
+  font-size: 6rem;
+  animation: fas-anime 3s linear infinite alternate;
+}
+@keyframes fas-anime{
+  from{
+    transform: scale(1.1);
+  }to{
+    transform: scale(1.8);
+  }
+}
